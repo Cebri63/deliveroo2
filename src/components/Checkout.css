@@ -1,0 +1,30 @@
+.checkout-container {
+  width: 1024px;
+  margin: auto;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.half {
+  width: calc(50% - 18px);
+}
+
+.all {
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px 0 10px 0px;
+  height: 30px;
+  text-indent: 10px;
+}

@@ -1,0 +1,12 @@
+.menu-background {
+  background-color: rgb(243, 245, 245);
+}
+
+.menu {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  flex-direction: row;
+  display: flex;
+}
