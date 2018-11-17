@@ -1,5 +1,5 @@
 import React from "react";
-import "./Cart.css";
+import "./CartCheckout.css";
 
 class CartCheckout extends React.Component {
   render() {
@@ -12,32 +12,17 @@ class CartCheckout extends React.Component {
     console.log(this.props.cart);
     for (let i = 0; i < this.props.cart.length; i++) {
       products.push(
-        <li className="cart-items" key={this.props.cart[i].id}>
-          <button
-            className="button-plus-moins"
-            onClick={() => {
-              this.props.onDecrement(this.props.cart[i].id);
-            }}
-          >
-            -
-          </button>
-          {this.props.cart[i].quantity}
-          <button
-            className="button-plus-moins"
-            onClick={() => {
-              this.props.onIncrement(this.props.cart[i].id);
-            }}
-          >
-            +
-          </button>
-          {this.props.cart[i].label}{" "}
-          <span>
+        <div className="products-and-price">
+          <div>
+            {this.props.cart[i].quantity} x {this.props.cart[i].label}{" "}
+          </div>
+          <div>
             {(this.props.cart[i].price * this.props.cart[i].quantity).toFixed(
               2
             )}{" "}
             €
-          </span>
-        </li>
+          </div>
+        </div>
       );
     }
 
@@ -51,16 +36,23 @@ class CartCheckout extends React.Component {
 
     return (
       <div className="cart">
-        <button className="cart-validation">Valider mon panier</button>
-
         <ul>
+          <li className="word-cart">Panier</li>
           <li className="products-cart">{products}</li>
-          <hr />
+
           <div className="cart-price">
-            <li>Sous-total {(total - 2.5).toFixed(2)} € </li>
-            <li>Frais de livraison 2.50 €</li>
-            <hr />
-            <li className="total">Total {total.toFixed(2)} €</li>
+            <div className="subtotal">
+              <li>Sous-total </li>
+              <li>{(total - 2.5).toFixed(2)} € </li>
+            </div>
+            <div className="price-livraison">
+              <li className="border-bottom-livraison">Frais de livraison</li>
+              <li>2.50 €</li>
+            </div>
+            <div className="price-total">
+              <li className="total">Total </li>
+              <li>{total.toFixed(2)} €</li>
+            </div>
           </div>
         </ul>
       </div>

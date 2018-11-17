@@ -13,11 +13,36 @@
   margin-bottom: 10px;
 }
 
+.subtotal,
+.price-livraison,
+.price-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.price-livraison {
+  border-bottom: solid lightgray 1px;
+}
+
 .total {
   font-weight: bold;
+  padding: 0;
 }
 li {
   list-style: none;
+}
+
+.products-and-price {
+  margin-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .cart-validation {
@@ -47,8 +72,16 @@ hr {
   align-content: space-between;
 }
 
-.button-plus-moins {
-  margin: 0 10px 0px 10px;
+.button-moins {
+  margin-right: 10px;
+  border-radius: 50%;
+  color: #00ccbc;
+  border: solid #00ccbc 1px;
+  background-color: white;
+}
+
+.button-plus {
+  margin-left: 10px;
   border-radius: 50%;
   color: #00ccbc;
   border: solid #00ccbc 1px;

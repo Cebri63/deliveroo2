@@ -14,30 +14,34 @@ class Cart extends React.Component {
     for (let i = 0; i < this.props.cart.length; i++) {
       products.push(
         <li className="cart-items" key={this.props.cart[i].id}>
-          <button
-            className="button-plus-moins"
-            onClick={() => {
-              this.props.onDecrement(this.props.cart[i].id);
-            }}
-          >
-            -
-          </button>
-          {this.props.cart[i].quantity}
-          <button
-            className="button-plus-moins"
-            onClick={() => {
-              this.props.onIncrement(this.props.cart[i].id);
-            }}
-          >
-            +
-          </button>
-          {this.props.cart[i].label}{" "}
-          <span>
-            {(this.props.cart[i].price * this.props.cart[i].quantity).toFixed(
-              2
-            )}{" "}
-            €
-          </span>
+          <div className="flex-cart">
+            <button
+              className="button-moins"
+              onClick={() => {
+                this.props.onDecrement(this.props.cart[i].id);
+              }}
+            >
+              -
+            </button>
+            {this.props.cart[i].quantity}
+            <button
+              className="button-plus"
+              onClick={() => {
+                this.props.onIncrement(this.props.cart[i].id);
+              }}
+            >
+              +
+            </button>
+            <div className="products-and-price">
+              <div>{this.props.cart[i].label} </div>
+              <div>
+                {(
+                  this.props.cart[i].price * this.props.cart[i].quantity
+                ).toFixed(2)}{" "}
+                €
+              </div>
+            </div>
+          </div>
         </li>
       );
     }
@@ -65,12 +69,20 @@ class Cart extends React.Component {
 
         <ul>
           <li className="products-cart">{products}</li>
-          <hr />
+
           <div className="cart-price">
-            <li>Sous-total {(total - 2.5).toFixed(2)} € </li>
-            <li>Frais de livraison 2.50 €</li>
-            <hr />
-            <li className="total">Total {total.toFixed(2)} €</li>
+            <div className="subtotal">
+              <li>Sous-total </li>
+              <li>{(total - 2.5).toFixed(2)} € </li>
+            </div>
+            <div className="price-livraison">
+              <li className="border-bottom-livraison">Frais de livraison</li>
+              <li>2.50 €</li>
+            </div>
+            <div className="price-total">
+              <li className="total">Total </li>
+              <li>{total.toFixed(2)} €</li>
+            </div>
           </div>
         </ul>
       </div>

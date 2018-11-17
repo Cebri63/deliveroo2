@@ -57,79 +57,89 @@ class Checkout extends React.Component {
         <div>
           <Header />
         </div>
-        <div>
-          <h2>Adresse de livraison</h2>
-          <form onSubmit={this.handleSubmit}>
-            <div className="formulaire">
-              <label className="column half">
-                Etage et numéro d'appartement
-                <input
-                  type="text"
-                  placeholder="ex : Appartement n°15"
-                  onChange={this.handleFloorChange}
-                  value={this.state.floor}
-                />
-              </label>
-              <label className="column half">
-                Digicode
-                <input
-                  type="text"
-                  placeholder="ex : B123"
-                  onChange={this.handleCodeChange}
-                  value={this.state.code}
-                />
-              </label>
-              <label className="column all">
-                Adresse
-                <input
-                  type="text"
-                  placeholder="ex : 100 rue de Rivoli"
-                  onChange={this.handleAdressChange}
-                  value={this.state.adress}
-                />
-              </label>
-              <label className="column half">
-                Code postal
-                <input
-                  type="text"
-                  placeholder="ex : 75001"
-                  onChange={this.handlePostalCodeChange}
-                  value={this.state.postalCode}
-                />
-              </label>
-              <label className="column half">
-                Ville
-                <input
-                  type="text"
-                  placeholder="ex : Paris"
-                  onChange={this.handleCityChange}
-                  value={this.state.city}
-                />
-              </label>
-              <label className="column all">
-                Numéro de téléphone
-                <input
-                  type="text"
-                  placeholder="ex : +33 9 77 55 03 30"
-                  onChange={this.handlePhoneNumberChange}
-                  value={this.state.phoneNumber}
-                />
-              </label>
-              <label className="column all">
-                Instructions pour votre livreur ?
-                <input
-                  type="text"
-                  placeholder="ex : C'est la porte noire près de l'animalerie. Merci d'appler lorsque vous êtes arrivez."
-                  onChange={this.handleInstructionChange}
-                  value={this.state.instruction}
-                />
-              </label>
-            </div>
 
-            <button type="submit">Confirmer & payer</button>
-          </form>
+        <div className="form-and-checkout">
+          <div>
+            <div className="back-color">
+              <h2>Le Pain Quotidien - Montorgueil</h2>
+              <h3>Adresse de livraison</h3>
+              <form onSubmit={this.handleSubmit}>
+                <div className="formulaire">
+                  <label className="column half">
+                    Etage et numéro d'appartement
+                    <input
+                      type="text"
+                      placeholder="ex : Appartement n°15"
+                      onChange={this.handleFloorChange}
+                      value={this.state.floor}
+                    />
+                  </label>
+                  <label className="column half">
+                    Digicode
+                    <input
+                      type="text"
+                      placeholder="ex : B123"
+                      onChange={this.handleCodeChange}
+                      value={this.state.code}
+                    />
+                  </label>
+                  <label className="column all">
+                    Adresse
+                    <input
+                      type="text"
+                      placeholder="ex : 100 rue de Rivoli"
+                      onChange={this.handleAdressChange}
+                      value={this.state.adress}
+                    />
+                  </label>
+                  <label className="column half">
+                    Code postal
+                    <input
+                      type="text"
+                      placeholder="ex : 75001"
+                      onChange={this.handlePostalCodeChange}
+                      value={this.state.postalCode}
+                    />
+                  </label>
+                  <label className="column half">
+                    Ville
+                    <input
+                      type="text"
+                      placeholder="ex : Paris"
+                      onChange={this.handleCityChange}
+                      value={this.state.city}
+                    />
+                  </label>
+                  <label className="column all">
+                    Numéro de téléphone
+                    <input
+                      type="text"
+                      placeholder="ex : +33 9 77 55 03 30"
+                      onChange={this.handlePhoneNumberChange}
+                      value={this.state.phoneNumber}
+                    />
+                  </label>
+                  <label className="column all last-input">
+                    Instructions pour votre livreur ?
+                    <input
+                      type="text"
+                      placeholder="ex : C'est la porte noire près de l'animalerie. Merci d'appler lorsque vous êtes arrivez."
+                      onChange={this.handleInstructionChange}
+                      value={this.state.instruction}
+                    />
+                  </label>
+                </div>
+
+                <button className="confirm-button" type="submit">
+                  Confirmer & payer
+                </button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <CartCheckout cart={this.props.location.cart} />
+          </div>
         </div>
-        <CartCheckout cart={this.props.location.cart} />
       </div>
     );
   }
