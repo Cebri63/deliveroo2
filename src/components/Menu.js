@@ -9,14 +9,16 @@ class Menu extends Component {
     let menuSectionsComponents = [];
     const entries = Object.entries(this.props.menu);
     for (let i = 0; i < entries.length; i++) {
-      menuSectionsComponents.push(
-        <MenuSection
-          addItem={this.props.addItem}
-          key={i}
-          label={entries[i][0]}
-          menuItems={entries[i][1]}
-        />
-      );
+      if (entries[i][1].length > 0) {
+        menuSectionsComponents.push(
+          <MenuSection
+            addItem={this.props.addItem}
+            key={i}
+            label={entries[i][0]}
+            menuItems={entries[i][1]}
+          />
+        );
+      }
     }
 
     return (

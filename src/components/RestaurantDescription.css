@@ -12,6 +12,8 @@
 .description-text {
   color: grey;
   font-size: 13px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .image-container > img {
