@@ -23,6 +23,10 @@
   flex: 1;
 }
 
+.item-card:hover {
+  cursor: pointer;
+}
+
 .card-description {
   color: grey;
   font-size: 13px;

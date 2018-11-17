@@ -87,3 +87,9 @@ hr {
   border: solid #00ccbc 1px;
   background-color: white;
 }
+
+.button-moins:hover,
+.button-plus:hover,
+.cart-validation:hover {
+  cursor: pointer;
+}
