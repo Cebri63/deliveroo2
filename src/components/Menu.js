@@ -24,7 +24,8 @@ class Menu extends Component {
     return (
       <div className="menu-background">
         <div className="menu">
-          <div>{menuSectionsComponents}</div>
+          <div className="menu-components">{menuSectionsComponents}</div>
+
           <div>
             <Cart
               onIncrement={this.props.onIncrement}

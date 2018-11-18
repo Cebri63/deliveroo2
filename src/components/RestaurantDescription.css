@@ -22,3 +22,18 @@
   object-fit: cover;
   border-radius: 4px;
 }
+
+@media (max-width: 1044px) {
+  .description-container {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .image-container {
+    margin-left: 15px;
+  }
+
+  .image-container > img {
+    width: 100%;
+  }
+}

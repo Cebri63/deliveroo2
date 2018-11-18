@@ -17,6 +17,7 @@ class Restaurant extends Component {
     return (
       <div>
         <Header />
+
         <RestaurantDescription
           name={this.state.restaurant.name}
           description={this.state.restaurant.description}

@@ -10,3 +10,19 @@
   flex-direction: row;
   display: flex;
 }
+
+.responsive-cart {
+  display: none;
+}
+
+@media (max-width: 1820px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1044px) {
+  .menu {
+    width: 100%;
+  }
+}

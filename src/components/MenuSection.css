@@ -9,3 +9,11 @@ h3 {
   padding-bottom: 15px;
   font-size: 30px;
 }
+
+@media (max-width: 1044px) {
+  .cards-container {
+    flex-direction: column;
+    margin-left: 15px;
+    width: 100%;
+  }
+}
