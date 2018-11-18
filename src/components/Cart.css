@@ -103,3 +103,8 @@ hr {
     width: 100%;
   }
 }
+@media (max-width: 1044px) {
+  .cart {
+    transform: scale(0.7);
+  }
+}
