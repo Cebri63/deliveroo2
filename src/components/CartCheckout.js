@@ -9,10 +9,9 @@ class CartCheckout extends React.Component {
 
     const products = [];
 
-    console.log(this.props.cart);
     for (let i = 0; i < this.props.cart.length; i++) {
       products.push(
-        <div className="products-and-price">
+        <div key={i} className="products-and-price">
           <div>
             {this.props.cart[i].quantity} x {this.props.cart[i].label}{" "}
           </div>
@@ -26,14 +25,6 @@ class CartCheckout extends React.Component {
       );
     }
 
-    let total = 0;
-
-    for (let i = 0; i < this.props.cart.length; i++) {
-      total =
-        total + this.props.cart[i].quantity * Number(this.props.cart[i].price);
-    }
-    total = total + 2.5;
-
     return (
       <div className="cart">
         <ul>
@@ -43,7 +34,7 @@ class CartCheckout extends React.Component {
           <div className="cart-price">
             <div className="subtotal">
               <li>Sous-total </li>
-              <li>{(total - 2.5).toFixed(2)} € </li>
+              <li>{(this.props.total - 2.5).toFixed(2)} € </li>
             </div>
             <div className="price-livraison">
               <li className="border-bottom-livraison">Frais de livraison</li>
@@ -51,7 +42,7 @@ class CartCheckout extends React.Component {
             </div>
             <div className="price-total">
               <li className="total">Total </li>
-              <li>{total.toFixed(2)} €</li>
+              <li>{this.props.total.toFixed(2)} €</li>
             </div>
           </div>
         </ul>

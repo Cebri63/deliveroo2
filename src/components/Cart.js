@@ -10,10 +10,9 @@ class Cart extends React.Component {
 
     const products = [];
 
-    console.log(this.props.cart);
     for (let i = 0; i < this.props.cart.length; i++) {
       products.push(
-        <li className="cart-items" key={this.props.cart[i].id}>
+        <div className="cart-items" key={this.props.cart[i].id}>
           <div className="flex-cart">
             <button
               className="button-moins"
@@ -42,7 +41,7 @@ class Cart extends React.Component {
               </div>
             </div>
           </div>
-        </li>
+        </div>
       );
     }
 
@@ -59,7 +58,7 @@ class Cart extends React.Component {
         <Link
           to={{
             pathname: "/checkout",
-
+            total: total,
             cart: this.props.cart // le tableau des produits
             // transmettre des variables
           }}
