@@ -32,10 +32,8 @@ Install packages :
 npm install
 ```
 
-````
-
 When installation is complete :
 
 ```bash
 npm start
-````
+```
