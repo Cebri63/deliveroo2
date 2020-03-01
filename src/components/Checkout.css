@@ -16,6 +16,10 @@ body {
   justify-content: space-between;
 }
 
+.formulaire input {
+  outline: none;
+}
+
 label {
   padding-top: 15px;
   color: #00ccbc;
@@ -42,6 +46,7 @@ h3 {
   background-color: #00ccbc;
   color: white;
   font-weight: bold;
+  outline: none;
 }
 
 .confirm-button:hover {

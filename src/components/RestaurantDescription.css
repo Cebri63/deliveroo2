@@ -1,8 +1,12 @@
+body {
+  outline: none;
+}
 .description-container {
   width: 1024px;
   margin: 0 auto;
   display: flex;
   padding: 20px 0;
+  align-items: center;
 }
 
 .title-description {
