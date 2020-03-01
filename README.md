@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<img src="https://github.com/Cebri63/deliveroo2/blob/master/preview/kapture.gif" width="800">
+	<img src="https://github.com/Cebri63/deliveroo2/blob/master/preview/kapture.gif" width="1000">
 </p>
 
 ## Overview
