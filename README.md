@@ -1,5 +1,5 @@
 <h1 align="center">
-	Airbnb Clone - React Native
+	Deliveroo Clone - React
 </h1>
 
 <p align="center">

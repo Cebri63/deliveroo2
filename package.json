@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "braces": "^3.0.2",
+    "mem": "^6.0.1",
     "react": "^16.6.3",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "react-stripe-elements": "^2.0.1"
+    "react-stripe-elements": "^2.0.1",
+    "serialize-javascript": "^3.0.0",
+    "set-value": "^3.0.1",
+    "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
     "start": "react-scripts start",
