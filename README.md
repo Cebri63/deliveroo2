@@ -8,7 +8,7 @@
 
 ## Overview
 
-**Delivroo Clone made at [Le Reacteur](https://www.lereacteur.io/) Bootcamp.**  
+**Deliveroo Clone made at [Le Reacteur](https://www.lereacteur.io/) Bootcamp.**  
 2 screens are availables : Restaurant and Checkout.
 
 ## Packages
