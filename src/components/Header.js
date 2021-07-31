@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-
-import DeliverooLogo from "../images/Deliveroo_logo.png";
-
+import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import TopBar from "./TopBar";
+import RestaurantInfos from "./RestaurantInfos";
+import RestaurantInfosLoader from "./RestaurantInfosLoader";
 
-class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-        <Link to="/">
-          <div className="logo-container">
-            <img
-              className="logo-image"
-              src={DeliverooLogo}
-              alt="Logo Deliveroo"
-            />
-          </div>
-        </Link>
-      </div>
-    );
-  }
-}
+const Header = (props) => {
+  const { restaurant } = props;
+
+  return (
+    <header className="Header">
+      <TopBar />
+      {restaurant === null ? (
+        <RestaurantInfosLoader />
+      ) : (
+        <RestaurantInfos
+          name={restaurant.name}
+          description={restaurant.description}
+          cover={restaurant.picture}
+        />
+      )}
+    </header>
+  );
+};
 
 export default Header;

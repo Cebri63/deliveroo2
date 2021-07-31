@@ -1,0 +1,9 @@
+.Content--center {
+  margin: 0 auto;
+  /* padding: 30px 0; */
+  width: 96vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}

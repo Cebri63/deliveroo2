@@ -1,0 +1,14 @@
+.MenuItems--items {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+@media (max-width: 1124px) {
+  .MenuItems--items {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}

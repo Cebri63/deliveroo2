@@ -1,42 +1,26 @@
-import React, { Component } from "react";
-
-import MenuSection from "./MenuSection";
-import Cart from "./Cart";
+import React from "react";
 import "./Menu.css";
+import MenuItems from "./MenuItems";
 
-class Menu extends Component {
-  render() {
-    let menuSectionsComponents = [];
-    const entries = Object.entries(this.props.menu);
-    for (let i = 0; i < entries.length; i++) {
-      if (entries[i][1].length > 0) {
-        menuSectionsComponents.push(
-          <MenuSection
-            addItem={this.props.addItem}
-            key={i}
-            label={entries[i][0]}
-            menuItems={entries[i][1]}
+const Menu = (props) => {
+  const { menu, addItem } = props;
+
+  let nonEmptyCategories = menu.filter((elem) => elem.meals.length > 0);
+
+  return (
+    <div className="Menu">
+      {nonEmptyCategories.map((elem, index) => {
+        return (
+          <MenuItems
+            key={index}
+            name={elem.name}
+            items={elem.meals}
+            addItem={addItem}
           />
         );
-      }
-    }
-
-    return (
-      <div className="menu-background">
-        <div className="menu">
-          <div className="menu-components">{menuSectionsComponents}</div>
-
-          <div>
-            <Cart
-              onIncrement={this.props.onIncrement}
-              onDecrement={this.props.onDecrement}
-              cart={this.props.cart}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+      })}
+    </div>
+  );
+};
 
 export default Menu;

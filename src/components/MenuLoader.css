@@ -1,0 +1,22 @@
+.MenuLoader {
+  flex: 1;
+  margin-right: 30px;
+  margin-bottom: -25px;
+}
+
+.MenuLoader--name {
+  background: white;
+  width: 60%;
+  height: 2.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.MenuLoader--items {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}

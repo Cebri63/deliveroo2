@@ -1,28 +1,11 @@
-.menu-background {
-  background-color: rgb(243, 245, 245);
+.Menu {
+  flex: 1;
+  margin-right: 30px;
+  margin-bottom: -25px;
 }
 
-.menu {
-  width: 1024px;
-  margin: 0 auto;
-  padding: 20px 0;
-
-  flex-direction: row;
-  display: flex;
-}
-
-.responsive-cart {
-  display: none;
-}
-
-@media (max-width: 1820px) {
-  .menu {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 1044px) {
-  .menu {
-    width: 100%;
+@media (max-width: 768px) {
+  .Menu {
+    margin-right: 0;
   }
 }

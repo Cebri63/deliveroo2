@@ -1,63 +1,83 @@
-.item-card {
-  height: 180px;
-  width: calc(50% - 30px);
+.MenuItem {
+  width: 50%;
+  min-width: 300px;
+  padding: 0 10px;
+  padding-bottom: 25px;
+}
+
+.MenuItem--card {
+  border-radius: 5px;
+  height: 160px;
+  background: white;
+  padding: 15px;
   display: flex;
-  background-color: white;
-  padding: 10px 10px 20px 10px;
-  border-radius: 4px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  user-select: none;
-  -webkit-box-shadow: 6px 6px 6px -3px rgba(194, 194, 194, 1);
-  -moz-box-shadow: 6px 6px 6px -3px rgba(194, 194, 194, 1);
-  box-shadow: 6px 6px 6px -3px rgba(194, 194, 194, 1);
+  flex-direction: row;
+  align-items: flex-start;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.MenuItem--card:hover {
+  box-shadow: 0px 22px 24px 0px rgba(46, 51, 51, 0.07);
+}
+
+.MenuItem--texts {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.MenuItem--texts h3 {
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.MenuItem--texts p {
+  font-size: 0.9rem;
+  color: #808484;
+  line-height: 1.3rem;
+  margin: 0;
+  height: 2.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+
+.MenuItem--infos {
+  display: flex;
+  align-items: center;
+}
+
+.MenuItem--price {
+  color: #808484;
+  font-size: 1.1rem;
+}
+
+.MenuItem--popular {
+  color: #ff8000;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.MenuItem--picture {
+  height: 130px;
+  width: 130px;
+  border-radius: 5px;
+  overflow: hidden;
   position: relative;
 }
 
-.card-label {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 15px;
-}
-
-.card-content {
-  flex: 1;
-}
-
-.item-card:hover {
-  cursor: pointer;
-}
-
-.card-description {
-  color: grey;
-  font-size: 13px;
-  margin-right: 10px;
-}
-
-.price-popular-container {
-  display: flex;
-}
-
-.card-price {
-  color: grey;
-  margin-right: 5px;
-}
-
-.card-popular {
-  color: orange;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.meal-image-container > img {
-  width: 96px;
-  height: 96px;
+.MenuItem--picture img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  border-radius: 4px;
 }
 
-@media (max-width: 1044px) {
-  .item-card {
-    width: 90%;
+@media (max-width: 1124px) {
+  .MenuItem {
+    width: 100%;
   }
 }

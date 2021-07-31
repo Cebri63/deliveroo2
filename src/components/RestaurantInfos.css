@@ -1,0 +1,57 @@
+.RestaurantInfos--center {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 96vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.RestaurantInfos--texts {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.RestaurantInfos--texts h1 {
+  font-size: 2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.RestaurantInfos--texts p {
+  color: #868a8a;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.RestaurantInfos--cover {
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f3f5f5;
+}
+
+@media (max-width: 885px) {
+  .RestaurantInfos--center {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .RestaurantInfos--cover {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  .RestaurantInfos--texts {
+    padding: 30px;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+}

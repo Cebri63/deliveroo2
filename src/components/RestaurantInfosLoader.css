@@ -1,0 +1,35 @@
+.RestaurantInfosLoader--center {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 96vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.RestaurantInfosLoader--texts {
+  flex: 1;
+}
+
+.RestaurantInfosLoader--title {
+  background: #f3f5f5;
+  width: 60%;
+  height: 2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.RestaurantInfosLoader--description {
+  background: #f3f5f5;
+  height: 3rem;
+  width: 90%;
+}
+
+.RestaurantInfosLoader--cover {
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f3f5f5;
+}
